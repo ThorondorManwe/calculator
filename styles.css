@@ -1,0 +1,59 @@
+html {
+    background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5);
+    background-size: cover;
+    font-family: 'helvetica neue';
+    text-align: center;
+    font-size: 10px;
+  }
+
+body {
+    /* margin: 0; */
+    font-size: 2rem;
+    /* display: flex;
+    flex: 1; */
+    min-height: 100vh;
+    align-items: center;
+}
+
+.container {
+    background: lightGrey;
+    width: max-content;
+    margin: auto;
+}
+
+.display {
+    width: 100%;
+    background-color: darkGrey;
+    height: 50px;
+    font-size: 48px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttons {
+    max-width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button {
+    flex: 1 25%;
+    padding: 15px;
+    font-size: 26px;
+}
+
+.btn-number {
+    background-color: grey;
+}
+
+.btn-operator {
+    background-color: orange;
+}
+
+.btn-equals {
+    background-color: green;
+}
+
+.btn-clear {
+    background-color: crimson;
+}
