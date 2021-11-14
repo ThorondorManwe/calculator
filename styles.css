@@ -28,6 +28,7 @@ body {
     font-size: 48px;
     display: flex;
     justify-content: flex-end;
+    /* border: 2px solid green; */
 }
 
 .buttons {
