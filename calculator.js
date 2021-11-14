@@ -20,8 +20,12 @@ function multiply(num1, num2) {
 }
 
 function divide(num1, num2) {
-  const division = num1 / num2;
-  return division;
+  if (num2 === 0) {
+    return "Don't divide by zero"
+  }else{
+    const division = num1 / num2;
+    return division;
+  }
 }
 
 /* Create a new function operate that takes an operator and 2 numbers and then calls one of the above functions on the numbers. */
@@ -37,6 +41,7 @@ function operate(operator, num1, num2) {
     resultado = divide(num1, num2);
   }
   display.textContent = resultado;
+  return resultado;
 }
 
 /* Create a basic HTML calculator with buttons for each digit, each of the above functions and an “Equals” key.
@@ -52,6 +57,7 @@ let displayValue = '';
 let firstNumber = 0;
 let secondNumber = 0;
 let operator = '';
+let answer = 0;
 
 const display = document.querySelector('.display');
 
@@ -85,9 +91,15 @@ buttons.forEach((button) => {
       console.log(displayValue);
       console.log(secondNumber);
       console.log('Es el botón de igual');
-      operate(operator, firstNumber, secondNumber);
+      answer = operate(operator, firstNumber, secondNumber);
+      displayValue = answer;
     }else if (button.classList.contains('btn-clear')) {  // Separar cuando se trate de un boton de C limpiar la pantalla
       display.textContent = '';
+      displayValue = '';
+      firstNumber = 0;
+      secondNumber = 0;
+      operator = '';
+      answer = 0;
       console.log('Es el boton de clear');
     }else if (button.classList.contains('btn-number')) { // Separar cuando se trate de un número
       console.log('Es un número');
